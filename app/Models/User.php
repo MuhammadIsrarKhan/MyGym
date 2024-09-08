@@ -44,4 +44,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function scheduledClasses() {
+        return $this->hasMany(ScheduledClass::class,'instructor_id');
+    }
 }
